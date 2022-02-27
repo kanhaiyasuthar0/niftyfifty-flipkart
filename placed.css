@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.pop{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+    color: white;
+    width: 25rem;
+    height: 10rem;
+    border: 1px solod #cecece;
+    border-radius: 3rem;
+    padding:3rem 4rem;
+    text-align: center;
+    animation-name:slow ;
+    animation-duration: 5s;
+    animation-fill-mode:both;
+    animation-iteration-count: infinite;
+    border: 1px solid white;
+}
+.pop:hover{
+    background: white;
+    border: 1px solid green;
+    color: black;
+    
+}
+
+@keyframes slow {
+    from{
+        background-color: green;
+        border: none;
+    }
+    to{
+            background-color: white;
+            border: 1px solid green;
+            color: black;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .logo {
+    height: 3rem;
+    width: 10rem;
+  }
+  
+  .cart {
+    color: green;
+    /* border:1px solid blue; */
+    /* margin-right: 4rem; */
+    border: 3px solid green;
+    background: none;
+    /* padding: 0.4rem; */
+    border-radius: 5px;
+  }
+  .cartno {
+    padding: 0.4rem;
+    border-radius: 5px;
+    margin-right: 2rem;
+    /* background-color: yellow; */
+    border: 3px solid green;
+    color: green;
+  }
+  .top{
+      display: grid;
+      grid-template-columns: auto auto;
+      margin-top: 6rem;
+  }
+
+label{
+    margin-left: 3rem;
+}

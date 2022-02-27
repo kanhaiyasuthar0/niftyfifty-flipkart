@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.logo {
+  height: 3rem;
+  width: 10rem;
+}
+
+.cart {
+  color: green;
+  /* border:1px solid blue; */
+  /* margin-right: 4rem; */
+  border: 3px solid green;
+  background: none;
+  /* padding: 0.4rem; */
+  border-radius: 5px;
+}
+.cartno {
+  padding: 0.4rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+  /* background-color: yellow; */
+  border: 3px solid green;
+  color: green;
+}
+.main {
+  margin-top: 6rem;
+  display: grid;
+  /* min-width: ; */
+  grid-template-columns: repeat(3,1fr);
+  /* width: 98.5vw; */
+  gap: 1rem;
+  height: 100vh;
+  /* margin: auto; */
+  /* border: 1px solid red; */
+  justify-items: center;
+  /* text-align: center; */
+}
+.main div {
+  border: 1px solid #cecece;
+  border-radius: 2rem;
+  text-align: center;
+  /* min-height: fit-content; */
+  overflow-y:inherit ;
+  /* justify-content:safe; */
+  min-width: 30rem;
+}
+.main div h4{
+    font-size: medium;
+}
+.main div button{
+    /* justify-self: left; */
+    /* border: 1px solid red; */
+    
+}
+
+.main img {
+  width: 9rem;
+  min-height: 8rem;
+  max-height: 9rem;
+
+  /* max-width: 5rem; */
+  /* border: 1px solid blue; */
+}
