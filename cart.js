@@ -9,6 +9,16 @@ let checkout = document.getElementById("checkout");
 
 let nav = document.querySelector(".navigation");
 nav.innerHTML = navbar();
+let loginname = localStorage.getItem("name");
+let tokenlogin = localStorage.getItem("token");
+if(!loginname && !tokenlogin){
+  alert("Please sign in to continue");
+  location.href = "/index.html";
+  
+  
+
+}
+
 
 
 let token = localStorage.getItem("token");

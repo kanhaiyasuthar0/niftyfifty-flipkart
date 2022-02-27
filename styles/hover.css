@@ -1,0 +1,45 @@
+.navigation ul > li:first-child {
+  animation: opena;
+}
+/* .navigation ul> li:first-child:hover{
+    animation: opena ;
+    transform: rotate(180deg);
+} */
+.useropen {
+  transition: all 2s;
+}
+.userdetails {
+  /* display:none; */
+}
+
+.userdetails {
+  display: none;
+}
+
+.navigation ul > li:first-child:hover .userdetails {
+  display: flex;
+  flex-direction: column;
+  max-width: fit-content;
+  position: absolute;
+  top: 4rem;
+  left: 55rem;
+  border: 1px solid red;
+}
+/*
+.useropen:hover .userdetails{
+    display: block;
+}
+.userdetails:hover{
+    animation-name: slow;
+  
+
+} */
+/* 
+@keyframes opena {
+    from{
+        transform: rotate(10deg);
+    }
+    to{
+        transform: rotate(180deg);
+    }
+} */

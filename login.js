@@ -7,42 +7,52 @@ let nav = document.querySelector(".navigation");
 console.log(navbar)
 nav.innerHTML = navbar();
 
-submit.addEventListener("click", async () => {
-  try {
-    let url = "https://masai-api-mocker.herokuapp.com/auth/register";
+let createbtn = document.querySelector(".create")
 
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-    let username = document.getElementById("username").value;
-    let mobile = document.getElementById("mobile").value;
-    let desc = document.getElementById("desc").value;
-    console.log(name, email, password, username, mobile, desc);
+createbtn.addEventListener("click" , (e)=>{
+  e.preventDefault();
+  location.href = "/register.html";
+})
 
-    let data = await fetch(url, {
-      method: "POST",
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        password: password,
-        username: username,
-        mobile: mobile,
-        description: desc,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    let res = await data.json();
-    if (!res.error) {
-      prompt("Thanks for registering");
-    }
-  } catch (error) {
-    // console.log(error);
-  }
-});
 
-login.addEventListener("click",async () => {
+// submit.addEventListener("click", async () => {
+//   try {
+//     let url = "https://masai-api-mocker.herokuapp.com/auth/register";
+
+//     let name = document.getElementById("name").value;
+//     let email = document.getElementById("email").value;
+//     let password = document.getElementById("password").value;
+//     let username = document.getElementById("username").value;
+//     let mobile = document.getElementById("mobile").value;
+//     let desc = document.getElementById("desc").value;
+//     console.log(name, email, password, username, mobile, desc);
+
+//     let data = await fetch(url, {
+//       method: "POST",
+//       body: JSON.stringify({
+//         name: name,
+//         email: email,
+//         password: password,
+//         username: username,
+//         mobile: mobile,
+//         description: desc,
+//       }),
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//     });
+//     let res = await data.json();
+//     if (!res.error) {
+//       prompt("Thanks for registering");
+//     }
+//   } catch (error) {
+//     // console.log(error);
+//   }
+// });
+
+login.addEventListener("click",async (e) => {
+  e.preventDefault();
+  // console.log("yousa")
   try {
     let url = "https://masai-api-mocker.herokuapp.com/auth/login";
     let password = document.getElementById("password1").value;

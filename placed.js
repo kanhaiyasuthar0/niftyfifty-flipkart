@@ -17,6 +17,6 @@ setTimeout(() => {
     placed();
 }, 5000);
 setTimeout(() => {
-    location.href = "/index.html";
+    location.href = "/home.html";
     localStorage.clear();
 }, 10000);

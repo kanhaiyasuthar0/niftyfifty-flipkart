@@ -6,6 +6,52 @@ import navbar from "./components/navbar.js";
 let nav = document.querySelector(".navigation");
 nav.innerHTML = navbar();
 
+let loginname = localStorage.getItem("name");
+let tokenlogin = localStorage.getItem("token");
+if(!loginname && !tokenlogin){
+  alert("Please sign in to continue");
+  location.href = "/index.html";
+}
+let i=0;
+setInterval(() => {
+  let slideshow = document.querySelector(".slideshow");
+  let h1 = document.querySelector(".details");
+
+  if(slideshow){
+    
+  }
+  let img = JSON.parse(localStorage.getItem("img"));
+  if(img){
+    slideshow.src = `${img[i].image}`;
+    h1.innerText = `${img[i].title}`
+    // h1.innerText = `${img[i].title}`
+    i++;
+    if(i>= img.length){
+      i=0;
+    }
+  }
+  // slideshow.src = "${"
+  // slideshow.append(img)
+}, 3000);
+
+// let slidcont = document.querySelector(".slideshow");
+//  rednderslid(){
+
+// }
+
+
+
+let useropen = document.querySelector(".useropen");
+useropen.addEventListener("mouseover" , ()=>{
+  
+})
+
+
+
+
+
+
+
 let main = document.querySelector(".main");
 let cartno = document.querySelector(".cartno");
 let cart = document.querySelector(".cart");
@@ -43,24 +89,26 @@ if(token && uname){
 }
 
 const renderuserlist = (res)=>{
-  let select = document.getElementById("userlist");
-  select.innerHTML = "";
-  let opt1 = document.createElement("option");
+  let userdetails = document.querySelector(".userdetails");
+  // userdetails.getElementsByClassName.display = "flex";
+  
+  userdetails.innerHTML = "";
+  let opt1 = document.createElement("p");
   opt1.innerText = ` Welcome ${res.name}`;
-  let opt2 = document.createElement("option");
+  let opt2 = document.createElement("p");
   opt2.innerText = ` Email: ${res.email}`;
-  let opt3 = document.createElement("option");
+  let opt3 = document.createElement("p");
   opt3.innerText = ` Username: ${res.username}`;
-  let opt4 = document.createElement("option");
+  let opt4 = document.createElement("p");
   opt4.innerText = ` Contact no: ${res.mobile}`;
-  let opt5 = document.createElement("option");
+  let opt5 = document.createElement("p");
   opt5.value = "logout"
   opt5.innerText = `Logout?`;
   
-  
-  select.append(opt1,opt2,opt3,opt4,opt5);
-  select.addEventListener("change" , ()=>{
-    let select = document.getElementById("userlist");
+  console.log(userdetails)
+  userdetails.append(opt1,opt2,opt3,opt4,opt5);
+  userdetails.addEventListener("change" , ()=>{
+    let select = document.querySelector(".userdetails");
     console.log("hello")
     if(select.value=="logout"){
       localStorage.removeItem("token")
@@ -78,11 +126,23 @@ async function getdata() {
   let res2 = await res1.json();
 
     console.log(res2);
+    // console.log(res2)
+  localStorage.setItem("img" , JSON.stringify([]));
+  let img = JSON.parse(localStorage.getItem("img"));
+  let slideshow = document.querySelector(".slideshow");
+
+  res2.forEach((Element)=>{
+    img.push(Element);
+    console.log(Element)
+    
+  })
+  localStorage.setItem("img" , JSON.stringify(img));
   render(res2);
 }
 getdata();
 
 function render(res2) {
+
   res2.forEach((item, index) => {
     let div = document.createElement("div");
     div.setAttribute("class", "item");
@@ -127,6 +187,7 @@ function addtocart(item) {
   
  
 }
+
 
 
 function cartnof(data){

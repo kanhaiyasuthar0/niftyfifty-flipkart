@@ -23,14 +23,14 @@ body {
   /* padding: 0.4rem; */
   border-radius: 5px;
 }
-.cartno {
+/* .cartno {
   padding: 0.4rem;
   border-radius: 5px;
   margin-right: 2rem;
   /* background-color: yellow; */
-  border: 3px solid green;
-  color: green;
-}
+  /* border: 3px solid green; */
+  /* color: green; */
+/* }  */
 .main {
   margin-top: 6rem;
   display: grid;
@@ -44,6 +44,29 @@ body {
   justify-items: center;
   /* text-align: center; */
 }
+.slider{
+  height: 20rem;
+  text-align: center;
+  border: 1px solid #cecece;
+  width: 90vw;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+.slideshow{
+  height: 100%;
+}
+.loginpopup{
+  /* display: none; */
+  z-index: 2;
+  background: transparent;
+  position: absolute;
+  top:3rem;
+  /* border: 1px solid blue; */
+}
+.popup .right{
+  border:1px solid #cecece ;
+  border-left: none;
+}
 .main div {
   border: 1px solid #cecece;
   border-radius: 2rem;
@@ -52,6 +75,7 @@ body {
   overflow-y:inherit ;
   /* justify-content:safe; */
   min-width: 30rem;
+  max-width: 30rem;
 }
 .main div h4{
     font-size: medium;

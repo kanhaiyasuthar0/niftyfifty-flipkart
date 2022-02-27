@@ -12,7 +12,9 @@
   .logo {
     height: 3rem;
     width: 10rem;
+   
   }
+  
   
   .cart {
     color: green;
@@ -22,14 +24,10 @@
     background: none;
     /* padding: 0.4rem; */
     border-radius: 5px;
+    display: none !important;
   }
   .cartno {
-    padding: 0.4rem;
-    border-radius: 5px;
-    margin-right: 2rem;
-    /* background-color: yellow; */
-    border: 3px solid green;
-    color: green;
+    display: none !important;
   }
   .top{
       display: grid;
@@ -62,6 +60,7 @@
     overflow-y:inherit ;
     /* justify-content:safe; */
     min-width: 30rem;
+    max-width: 30rem;
   }
   .main div h4{
       font-size: medium;
@@ -115,4 +114,11 @@
   ::placeholder {
     color: green;
     opacity: 1; 
+  }
+
+  .nav > ul>li:nth-child(2){
+    display:none !important
+  }
+  .nav > ul>li:nth-child(3){
+    display:none !important
   }

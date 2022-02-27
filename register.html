@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/login.css">
-    <script src="/login.js" type="module" defer></script>
+    <!-- <link rel="stylesheet" href="/login.css"> -->
+    <!-- <script src="/login.js" type="module" defer></script> -->
+    <script src="/reg.js" type="module"></script>
+    <!-- <script src="/"></script> -->
     <style>
         .navigation ul li{
            display: none;
@@ -29,9 +31,9 @@
       
     </div>
 
-    <div style="background-blend-mode: hue;display: flex;width: 100vw;height: 100vh;padding:3rem 22rem;" class="popup">
+    <div style="background-blend-mode: hue;display: flex;width: 100vw;height: 100vh;padding:2rem 22rem;" class="popup">
 
-        <div style="flex:2 ;height:85vh ;padding:1rem;background-color: rgba(40,116,240,255);color: white;font-size:xx-large;border-top-left-radius:5px ;border-bottom-left-radius:5px ;" class="left">Login <br>
+        <div style="flex:2 ;height:85vh ;padding:1rem;background-color: rgba(40,116,240,255);color: white;font-size:xx-large;border-top-left-radius:5px ;border-bottom-left-radius:5px ;" class="left">Signup <br>
          <span style="font-size: large;text-align: justify;max-width: 2rem ">Get access to your Orders, Wishlist and Recommendations</span> </div>
     
     
@@ -39,17 +41,30 @@
         <div style="flex:4;height:85vh;background-color: white ;padding:3rem;border-top-right-radius:5px ;border-bottom-right-radius:5px;border: 1px solid #cecece ;" class="right">
           
           <form style="display: flex; flex-direction: column;" >
+            <label  for="name">Enter Full Name</label>
+            <input style="border: none; border-bottom: 1px solid #cecece;" type="text" name="name" id="name"  ><br>
+            <label  for="email">Enter Email</label>
+            <input style="border: none; border-bottom: 1px solid #cecece;" type="text" name="email" id="email"  ><br>
             <label  for="username">Enter Username</label>
-            <input style="border: none; border-bottom: 1px solid #cecece;" type="text" name="username" id="username1"  ><br>
+            <input style="border: none; border-bottom: 1px solid #cecece;" type="text" name="username" id="username"  ><br>
             <label for="password">Enter Password</label>
-            <div style="display: flex;" class="pass"> <input style=" flex: 8;border: none; border-bottom: 1px solid #cecece;" type="password" name="password" id="password1"  ><div style="flex:1; border-bottom: 1px solid #cecece;color: rgba(40,116,240,255);font-weight: 500;font-size: large;" class="fo">  <a class="forgot" style="text-decoration: none;" href="/register.html">Forgot?</a>  </div></div>
-           <p style="margin: 2rem 0rem;">By continuing, you agree to Flipkart's <a  href="/greet.html">Terms of Use</a>  and <a href="/greet.html"> Privacy Policy</a>.</p>
+            
+            <input style="border: none; border-bottom: 1px solid #cecece;" type="password" name="password" id="password"  ><br>
+            <label for="mobile">Enter Mobile</label>
+            
+            
+            <input style="border: none; border-bottom: 1px solid #cecece;" type="mobile" name="mobile" id="mobile"  ><br>
+            
+            <textarea name="desc" id="desc" cols="50" rows="2" id="desc" placeholder="Describe yourself"></textarea>
+
+            <!-- <div style="display: flex;" class="pass"> <input style=" flex: 8;border: none; border-bottom: 1px solid #cecece;" type="password" name="password" id="password"  ><div style="flex:1; border-bottom: 1px solid #cecece;color: rgba(40,116,240,255);font-weight: 500;font-size: large;" class="fo">  <a style="text-decoration: none;" href="">Forgot?</a>  </div></div> -->
+           <p style="margin: 1rem 0rem;">By continuing, you agree to Flipkart's <a  href="">Terms of Use</a>  and <a href=""> Privacy Policy</a>.</p>
     
-           <button style="box-shadow: 0 2px 2px 2px ;background-color: rgba(251,100,27,255);outline: none  ;border: none;height: 3.5rem;color: white;font-size: larger;" class="submit1">Login</button>
-           <p style="text-align:center; margin:2rem 0">OR</p>
-           <button style="outline: none  ;border: none;height: 3.5rem;color: rgba(40,116,240,255);font-size: larger;font-weight: 500;box-shadow: 0 2px 2px 2px #cecece ;" class="submit">Request OTP</button>
+           <button style="box-shadow: 0 2px 2px 2px ;background-color: rgba(251,100,27,255);outline: none  ;border: none;height: 3.5rem;color: white;font-size: larger;" class="submit">Signup</button>
+           
+           
           </form>
-          <a style="margin-left: 7rem;"  href="/register.html" class="create"> New to Flipkart? Create an account </a>
+         
         </div>
 
 
