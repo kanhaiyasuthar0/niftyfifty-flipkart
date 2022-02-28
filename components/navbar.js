@@ -1,5 +1,5 @@
 // function navbar() {
-//   return `<nav style="height:4rem; width:100vw" class="bg-primary">
+//   return `<nav style="height:4rem; position:fixed;top:0; width:100vw" class="bg-primary">
 //         <div  class="container" style="border:1px solid red; display:inline-block;height:4rem; width:100%"  >
 //           <a style= " padding:1rem ;margin-left:10rem; width:20%; text-align:right; border:1px solid red" href="/index.html"
 //             ><img
@@ -41,7 +41,7 @@
 // }
 
 function navbar(){
-  return `<div style= " height:4.3rem; background-color: rgba(40,116,240,255);" class="nav">
+  return `<div style= "position:fixed;top:0; height:4.3rem;width:100%;overflow-y:hidden; background-color: rgba(40,116,240,255);" class="nav">
   <a style="text-align: right ; width: 22%;" href="/home.html"
   ><img style="width:10rem; height: 4rem; padding: 0.8rem;"
     class="logo"
